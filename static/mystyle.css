@@ -1,0 +1,33 @@
+.row {
+       text-align: center;
+       item-align: center;
+     }
+
+.col {
+        background: linear-gradient(to top, #ffffff 40%, #1f1e1e 84%);
+        item-align: center;
+}
+
+.control-label {
+                  display: block;
+                  color: rgb(255,255,255);
+                  item-align: center;
+}
+
+.form-group {
+        align-items: center;
+        margin: 3% 0;
+}
+
+.form-group input {
+                   display: inline-flex;
+                   margin : 5% 15% 0;
+                   max-width: 40%;
+}
+
+#submit {
+              padding: 1% 3%;
+              font-size: 22px;
+              font-weight: 600;
+              font-family: Verdana;
+}
