@@ -13,6 +13,8 @@ class NewCafe(FlaskForm):
 app = Flask(__name__)
 Bootstrap(app)
 
+
+
 @app.route("/", methods=["POST", "GET"])
 def home():
     is_edit = False
@@ -21,9 +23,13 @@ def home():
     word = False
     form = NewCafe(meta={'csrf': False})
     if form.validate_on_submit():
+        import os
+        from dotenv import load_dotenv
+        load_dotenv(".env")
         import requests
+        token = os.getenv("TOKEN")
         headers = {
-            "Authorization": "Token 66ab3a3a00d3ff67dc360abaa73ff615cc5af22c"
+            "Authorization": token
         }
         word = request.form.get('name').capitalize()
         try:
